@@ -6,8 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>張平興的BMI計算器</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script>src="bmi.js"</script>
 </head>
 <body>
     <h1><a href="/">張平興</a>的BMI計算器</h1>
+    <p>輸入您的身高：<input type="text" id="height"/>公分</p>
+    <p>輸入您的體重：<input type="text" id="weight"/>公斤</p>
+    <input type="submit" value="computeBMI" onclick="computeBMI();">
+    <p>您的BMI值：<span id="output">?</span></p>
 </body>
 </html>
