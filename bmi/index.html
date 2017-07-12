@@ -6,12 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>張平興的BMI計算器</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script>function computeBMI() {
-            var height = Number(document.getElementById("height").value);
-            var weight = Number(document.getElementById("weight").value);
-            var BMI = Math.round(weight / Math.pow(height, 2) * 10000);
-            document.getElementById("output").innerText = Math.round(BMI * 100) / 100;
-        }</script>
+    <script src="bmi.js"></script>
 </head>
 <body>
     <h1><a href="/">張平興</a>的BMI計算器</h1>
