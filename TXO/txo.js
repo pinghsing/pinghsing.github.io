@@ -9,5 +9,7 @@ function TXO() {
             var income=(strike-contract)*cp*50*amount;
             if(income<0)income=0;
             var revenue=income-cost;
-            document.getElementById("txo").innerText=revenue;
+            document.getElementById("cost").innerText=cost;
+            document.getElementById("income").innerText=income;
+            document.getElementById("revenue").innerText=revenue;
         }
