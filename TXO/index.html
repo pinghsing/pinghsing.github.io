@@ -11,12 +11,12 @@
 </head>
 <body>
     <h1 class="text-center"><a href="/">張平興</a>的台指選擇權計算機</h1>
-    <p>權利金：<input type="text" id="price"/>點</p>
-    <p>口數：<input type="text" id="amount"/>口</p>
-    <p>手續費(單邊)：<input type="text" id="fee"/>元/口</p>
-    <p>履約價格：<input type="text" id="contract"/>點</p>
+    <p>權利金：<input type="text" id="price" value="50"/>點</p>
+    <p>口數：<input type="text" id="amount" value="10"/>口</p>
+    <p>手續費(單邊)：<input type="text" id="fee" value="25"/>元/口</p>
+    <p>履約價格：<input type="text" id="contract" value="10000"/>點</p>
     <p><select id="cp"><option value="1">買權</option><option value="-1">賣權</option></select></p>
-    <p>結算價：<input type="text" id="strike"/>點</p>
+    <p>結算價：<input type="text" id="strike" value="10000"/>點</p>
     <p><button onclick="TXO()">計算盈虧</button></p>
     <h4>權利金成本：<span id="cost">?</span>元</h4>
     <h4>買入手續費成本：<span id="buyfee">?</span>元</h4>
@@ -38,7 +38,7 @@
     <h2>手續費</h2>
     <n>期貨公司為我們處理選擇權交易關事宜，需要收費。</n>
     <h2>期交稅</h2>
-    <n>收錢時要給政府抽成，不論盈虧。</n>
+    <n>收錢時要給政府抽成，不論盈虧。選擇權結算期交稅=結算價*50元*口數*0.00002</n>
     <h2>盈虧計算</h2>
     <n>權利金成本=權利金*50元*口數</n>
     <n>買權履約收入=(結算價-履約價)*50元*口數</n>

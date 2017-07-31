@@ -9,7 +9,7 @@ function TXO() {
             var cost=price*50*amount;
             var buyfee=fee*amount;
             var clearfee=fee*amount;
-            var tax=strike*50*amount*0.00002;
+            var tax=Math.ceil(strike*50*amount*0.00002);
             var income=(strike-contract)*cp*50*amount;
             if(income<0)
                 {
@@ -17,7 +17,7 @@ function TXO() {
                     tax=0;
                     clearfee=0;
                 }
-            var revenue=income-cost;
+            var revenue=income-cost-buyfee-clearfee-tax;
             document.getElementById("cost").innerText=cost;
             document.getElementById("buyfee").innerText=buyfee;
             document.getElementById("income").innerText=income;
