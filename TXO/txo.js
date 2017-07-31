@@ -9,9 +9,9 @@ function TXO() {
             var cost=price*50*amount;
             var buyfee=fee*amount;
             var clearfee=fee*amount;
-            var tax=Math.ceil(strike*50*amount*0.00002);
+            var tax=Math.round(strike*50*amount*0.00002);
             var income=(strike-contract)*cp*50*amount;
-            if(income<0)
+            if(income<=0)
                 {
                     income=0;
                     tax=0;
