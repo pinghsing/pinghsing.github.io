@@ -4,7 +4,7 @@ function TXO() {
             var contract=Number(document.getElementById("contract").value);
             var e = document.getElementById("cp");
             var cp=Number(e.options[e.selectedIndex].value);
-            var cp=Number(document.getElementById("strike").value);
+            var strike=Number(document.getElementById("strike").value);
             var cost=price*50*amount;
             var income=(strike-contract)*cp*50*amount;
             if(income<0)income=0;
