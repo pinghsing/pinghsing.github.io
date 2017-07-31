@@ -11,7 +11,7 @@ function TXO() {
             var clearfee=fee*amount;
             var tax=Math.round(strike*50*amount*0.00002);
             var income=(strike-contract)*cp*50*amount;
-            if(income<=0)
+            if(income<1)
                 {
                     income=0;
                     tax=0;
