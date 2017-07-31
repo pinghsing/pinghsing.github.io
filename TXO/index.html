@@ -13,12 +13,16 @@
     <h1 class="text-center"><a href="/">張平興</a>的台指選擇權計算機</h1>
     <p>權利金：<input type="text" id="price"/>點</p>
     <p>口數：<input type="text" id="amount"/>口</p>
+    <p>手續費(單邊)：<input type="text" id="fee"/>元/口</p>
     <p>履約價格：<input type="text" id="contract"/>點</p>
     <p><select id="cp"><option value="1">買權</option><option value="-1">賣權</option></select></p>
     <p>結算價：<input type="text" id="strike"/>點</p>
     <p><button onclick="TXO()">計算盈虧</button></p>
-    <h4>成本：<span id="cost">?</span>元</h4>
+    <h4>權利金成本：<span id="cost">?</span>元</h4>
+    <h4>買入手續費成本：<span id="buyfee">?</span>元</h4>
     <h4>履約收入：<span id="income">?</span>元</h4>
+    <h4>結算手續費成本：<span id="clearfee">?</span>元</h4>
+    <h4>結算期交稅成本：<span id="tax">?</span>元</h4>
     <h4>盈虧：<span id="revenue">?</span>元</h4>
     <h3>台指選擇權交易規則</h3>
     <h2>只有權利沒有責任</h2>
@@ -31,8 +35,12 @@
     <n>現金結算省略上述買進賣出的過程，直接支付價差。</n>
     <h2>口數計算</h2>
     <n>每口台指權之規模為：新台幣50元/點</n>
+    <h2>手續費</h2>
+    <n>期貨公司為我們處理選擇權交易關事宜，需要收費。</n>
+    <h2>期交稅</h2>
+    <n>收錢時要給政府抽成，不論盈虧。</n>
     <h2>盈虧計算</h2>
-    <n>成本=權利金*50元*口數</n>
+    <n>權利金成本=權利金*50元*口數</n>
     <n>買權履約收入=(結算價-履約價)*50元*口數</n>
     <n>賣權履約收入=(履約價-結算價)*50元*口數</n>
     <n>如果履約收入為負則不履約，因此履約收入變為0</n>
