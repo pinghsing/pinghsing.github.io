@@ -21,6 +21,7 @@ $('#insert').on('click', function() {
 })
 
 function showitem(value){
+    console.log("物件載入");
     var name=value.name;
     var price=Number(value.price);
     var count=Number(value.count);
@@ -32,7 +33,7 @@ $('#query').on('click', function() {
         if (response) {
             if (response.result) {
                 // TODO HW2 作業寫在這裡
-                $('#message').text('查詢成功');
+                console.log('查詢成功');
                 var data=response.data;
                 data.forEach(showitem);
             } else {
