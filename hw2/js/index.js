@@ -26,6 +26,9 @@ function showitem(value){
     var price=Number(value.price);
     var count=Number(value.count);
     var image=value.image;
+    $img=$('<img>').attr('class','thumb').attr('src',image);
+    $col=$('<div>').attr('class','col-*').append($img);
+    $('#data').append($col);
 }
 
 $('#query').on('click', function() {
