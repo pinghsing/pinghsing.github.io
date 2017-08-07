@@ -21,13 +21,9 @@ $('#insert').on('click', function() {
 })
 
 function showitem(value){
-    var name=value.name;
-    var price=Number(value.price);
-    var count=Number(value.count);
-    var image=value.image;
-    $img=$('<img>').attr('class','thumb').attr('src',image);
-    $title=$('<h3>').attr('class','title').html(name);
-    $price=$('<p>').attr('class','price').html("NT$ "+price);
+    $img=$('<img>').attr('class','thumb').attr('src',value.image);
+    $title=$('<h3>').attr('class','title').html(value.name);
+    $price=$('<p>').attr('class','price').html("NT$ "+value.price);
     $item=$('<div>').attr('class','item').append($img).append($title).append($price);
     $col=$('<div>').attr('class','col-*').append($item);
     $('#product-list').append($col);
