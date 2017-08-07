@@ -28,7 +28,7 @@ function showitem(value){
     var image=value.image;
     $img=$('<img>').attr('class','thumb').attr('src',image);
     $col=$('<div>').attr('class','col-*').append($img);
-    $('#data').append($col);
+    $('#product-list').append($col);
 }
 
 $('#query').on('click', function() {
