@@ -21,13 +21,15 @@ $('#insert').on('click', function() {
 })
 
 function showitem(value){
-    console.log(value);
     var name=value.name;
     var price=Number(value.price);
     var count=Number(value.count);
     var image=value.image;
     $img=$('<img>').attr('class','thumb').attr('src',image);
-    $col=$('<div>').attr('class','col-*').append($img);
+    $title=$('<h3>').attr('class','title').value(name);
+    $price=$('<p>').attr('class','price').value(price);
+    $item=$('<div>').attr('class','item').append($img);
+    $col=$('<div>').attr('class','col-*').append($item);
     $('#product-list').append($col);
 }
 
