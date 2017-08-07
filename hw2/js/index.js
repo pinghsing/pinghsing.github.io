@@ -26,8 +26,8 @@ function showitem(value){
     var count=Number(value.count);
     var image=value.image;
     $img=$('<img>').attr('class','thumb').attr('src',image);
-    $title=$('<h3>').attr('class','title').append(name);
-    $price=$('<p>').attr('class','price').append(price);
+    $title=$('<h3>').attr('class','title').html(name);
+    $price=$('<p>').attr('class','price').html("NT$ "+price);
     $item=$('<div>').attr('class','item').append($img);
     $col=$('<div>').attr('class','col-*').append($item);
     $('#product-list').append($col);
